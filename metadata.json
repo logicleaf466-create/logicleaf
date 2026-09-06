@@ -1,0 +1,6 @@
+{
+  "name": "Ira AI",
+  "description": "Executive Control Center for Civil Services Competency Gap Analysis, Learning Roadmaps, AI Quiz Studio, and Progress Tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
