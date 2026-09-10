@@ -8,17 +8,17 @@ import {
   Download,
   Share2,
   FileCheck,
-  Shield,
-  Star,
-  Sparkles
+  ShieldCheck,
+  QrCode,
 } from 'lucide-react';
 
 interface ProgressScreenProps {
   user: UserProfile;
   onNavigate: (screen: ScreenId) => void;
+  onOpenCopilot?: () => void;
 }
 
-export const ProgressScreen: React.FC<ProgressScreenProps> = ({ user, onNavigate }) => {
+export const ProgressScreen: React.FC<ProgressScreenProps> = ({ user, onNavigate, onOpenCopilot }) => {
   const [dossierGenerated, setDossierGenerated] = useState(false);
 
   const months = [
@@ -32,25 +32,31 @@ export const ProgressScreen: React.FC<ProgressScreenProps> = ({ user, onNavigate
 
   const badges = [
     {
-      title: 'Certified Public Procurement Officer',
-      authority: 'National Institute of Financial Management',
+      title: 'Certified Public Procurement Officer (GFR 2024)',
+      authority: 'National Institute of Financial Management (NIFM)',
       date: 'Aug 2024',
       code: 'BM-04',
       level: 'Apex Executive',
+      kp: 250,
+      color: 'bg-[#EDF1F7] border-[#C7D9FB]',
     },
     {
       title: 'Digital Governance & Cyber Vigilance Lead',
-      authority: 'MeitY & NIC',
+      authority: 'Ministry of Electronics & IT (MeitY) & NIC',
       date: 'Jul 2024',
       code: 'FR-01',
       level: 'Mastery',
+      kp: 300,
+      color: 'bg-[#FFE9CD] border-[#FFD2A1]',
     },
     {
-      title: 'Sevottam Citizen Grievance Redressal Award',
+      title: 'Sevottam Citizen Grievance Redressal Distinction',
       authority: 'DARPG, Government of India',
       date: 'May 2024',
       code: 'CC-01',
       level: 'Honorary Distinction',
+      kp: 200,
+      color: 'bg-[#FEF3C7] border-[#FDE68A]',
     },
     {
       title: 'Administrative Ethics & AI Oversight Fellow',
@@ -58,209 +64,251 @@ export const ProgressScreen: React.FC<ProgressScreenProps> = ({ user, onNavigate
       date: 'Mar 2024',
       code: 'EV-02',
       level: 'Apex Executive',
+      kp: 350,
+      color: 'bg-[#EDF1F7] border-[#C7D9FB]',
     },
   ];
 
-  const handleGenerateDossier = () => {
+  const handleExportDossier = () => {
     setDossierGenerated(true);
+    setTimeout(() => setDossierGenerated(false), 4000);
   };
 
   return (
-    <section id="progress-screen" class="flex-1 p-6 md:p-8 space-y-6 overflow-y-auto">
-      {/* Header */}
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-800 pb-5">
-        <div>
-          <div class="flex items-center gap-2 mb-1">
-            <TrendingUp class="w-5 h-5 text-amber-500" />
-            <h2 class="text-2xl font-serif text-white font-semibold tracking-wide">
-              Progress & Executive Analytics
-            </h2>
-          </div>
-          <p class="text-xs text-gray-400">
-            Validated learning telemetry, assessment percentiles, and official iGOT Karmayogi Bharat competency records.
-          </p>
-        </div>
-
-        <button
-          id="btn-generate-apar-dossier"
-          onClick={handleGenerateDossier}
-          class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold rounded-xl shadow-lg transition-all flex items-center gap-2 cursor-pointer"
-        >
-          <Download class="w-3.5 h-3.5" />
-          <span>Export APAR Learning Dossier</span>
-        </button>
-      </div>
-
-      {dossierGenerated && (
-        <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300 flex items-center justify-between transition-all">
-          <div class="flex items-center gap-2">
-            <CheckCircle2 class="w-4 h-4 text-emerald-400" />
-            <span>Executive Performance Appraisal Dossier generated for Dr. Rajesh Varma (Cadre Level 14). Ready for submission.</span>
-          </div>
-          <button
-            onClick={() => setDossierGenerated(false)}
-            class="text-[10px] uppercase font-bold text-gray-400 hover:text-white underline cursor-pointer"
-          >
-            Dismiss
-          </button>
-        </div>
-      )}
-
-      {/* Top 4 KPI Metric Cards */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl">
-          <p class="text-xs text-gray-400 font-medium">Verified Learning Hours</p>
-          <h3 class="text-3xl font-serif text-white font-bold mt-2">167.5</h3>
-          <p class="text-[10px] text-emerald-400 mt-2 font-mono">+18.5 hrs this month</p>
-        </div>
-        <div class="bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl">
-          <p class="text-xs text-gray-400 font-medium">Competencies Certified</p>
-          <h3 class="text-3xl font-serif text-white font-bold mt-2">18 / 20</h3>
-          <p class="text-[10px] text-amber-400 mt-2 font-mono">90% FRAC Coverage</p>
-        </div>
-        <div class="bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl">
-          <p class="text-xs text-gray-400 font-medium">Quiz Assessment Accuracy</p>
-          <h3 class="text-3xl font-serif text-white font-bold mt-2">94.2%</h3>
-          <p class="text-[10px] text-emerald-400 mt-2 font-mono">Top Tier Distinction</p>
-        </div>
-        <div class="bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl">
-          <p class="text-xs text-gray-400 font-medium">National Cadre Percentile</p>
-          <h3 class="text-3xl font-serif text-white font-bold mt-2">Top 4%</h3>
-          <p class="text-[10px] text-amber-400 mt-2 font-mono">Among Joint Secretaries</p>
-        </div>
-      </div>
-
-      {/* 2-Column Split: Monthly Velocity Chart & Cadre Distribution */}
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Monthly Velocity Chart (7 cols) */}
-        <div class="lg:col-span-7 bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl space-y-6">
-          <div class="flex items-center justify-between border-b border-gray-800 pb-4">
-            <div>
-              <h3 class="text-base font-serif text-white font-semibold">
-                Monthly Learning Velocity
-              </h3>
-              <p class="text-xs text-gray-400 mt-0.5">Hours logged against recommended quarterly targets</p>
-            </div>
-            <span class="text-xs text-amber-400 font-mono font-medium">FY 2024-25</span>
-          </div>
-
-          {/* Bar chart visualization in Tailwind */}
-          <div class="space-y-4 pt-2">
-            <div class="flex items-end justify-between gap-4 h-48 px-2 pb-2 border-b border-gray-800/80">
-              {months.map((m, idx) => {
-                const heightPercent = Math.min(100, (m.hours / 45) * 100);
-
-                return (
-                  <div key={idx} class="flex-1 flex flex-col items-center gap-2 group">
-                    <div class="text-[10px] font-mono text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                      {m.hours}h
-                    </div>
-                    <div class="w-full bg-gray-800/60 rounded-t-lg relative flex items-end justify-center h-full overflow-hidden">
-                      <div
-                        class="w-full bg-amber-500 rounded-t-lg group-hover:bg-amber-400 transition-all duration-500 shadow-md shadow-amber-500/20"
-                        style={{ height: `${heightPercent}%` }}
-                      ></div>
-                    </div>
-                    <span class="text-xs text-gray-400 font-medium group-hover:text-amber-400 transition-colors">
-                      {m.name}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div class="flex items-center justify-between text-xs text-gray-500 pt-1">
-              <span class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-amber-500 rounded-sm"></span>
-                Logged Study Hours
-              </span>
-              <span>Cadre Average: 18 hrs / month</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Cadre Competency Radar / Benchmark (5 cols) */}
-        <div class="lg:col-span-5 bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl space-y-5 flex flex-col justify-between">
-          <div>
-            <div class="border-b border-gray-800 pb-4 mb-4">
-              <h3 class="text-base font-serif text-white font-semibold">
-                FRAC Framework Distribution
-              </h3>
-              <p class="text-xs text-gray-400 mt-0.5">Competency readiness balance by domain pillar</p>
-            </div>
-
-            <div class="space-y-3.5">
-              {[
-                { name: 'Behavioral Competencies', score: 92, color: 'bg-emerald-500' },
-                { name: 'Functional Governance (GFR/GeM)', score: 76, color: 'bg-amber-500' },
-                { name: 'Domain Specialization (Public Admin)', score: 88, color: 'bg-emerald-500' },
-                { name: 'Digital & Cybersecurity Architecture', score: 68, color: 'bg-red-500' },
-                { name: 'Citizen Centricity (CPGRAMS)', score: 96, color: 'bg-emerald-500' },
-              ].map((domain, idx) => (
-                <div key={idx} class="space-y-1">
-                  <div class="flex justify-between text-xs">
-                    <span class="text-gray-300 font-medium">{domain.name}</span>
-                    <span class="text-amber-400 font-mono font-semibold">{domain.score}%</span>
-                  </div>
-                  <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
-                    <div
-                      class={`${domain.color} h-full rounded-full`}
-                      style={{ width: `${domain.score}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div class="p-3.5 rounded-xl bg-amber-500/5 border border-amber-500/20 text-xs text-gray-300 flex items-center gap-3">
-            <Sparkles class="w-4 h-4 text-amber-500 shrink-0" />
-            <span>AI recommends focusing on Digital & Cybersecurity to cross 90% overall threshold.</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Official Verified Badges & Certifications */}
-      <div class="bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl space-y-5">
-        <div class="flex items-center justify-between border-b border-gray-800 pb-4">
-          <div>
-            <h3 class="text-base font-serif text-white font-semibold">
-              Accredited iGOT Karmayogi Certifications
-            </h3>
-            <p class="text-xs text-gray-400 mt-0.5">Cryptographically signed credentials eligible for Civil List recording</p>
-          </div>
-          <span class="text-xs text-amber-500 font-semibold">{badges.length} Verified</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {badges.map((badge, idx) => (
-            <div
-              key={idx}
-              class="p-4 rounded-xl bg-[#0F1115] border border-gray-800 hover:border-amber-500/40 transition-all flex flex-col justify-between group"
-            >
-              <div>
-                <div class="flex items-center justify-between mb-3">
-                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-                    <Shield class="w-4 h-4" />
-                  </div>
-                  <span class="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-black/40 text-amber-400 border border-gray-800">
-                    {badge.code}
-                  </span>
-                </div>
-                <h4 class="text-xs font-semibold text-white group-hover:text-amber-400 transition-colors">
-                  {badge.title}
-                </h4>
-                <p class="text-[10px] text-gray-400 mt-1">{badge.authority}</p>
+    <section id="progress-screen" class="space-y-6 animate-in fade-in duration-200 pb-12">
+      {/* Officer Competency Passport Header Card: Light Blue Box (#EDF1F7) */}
+      <div class="bg-[#EDF1F7] border border-[#C7D9FB] rounded-2xl p-6 md:p-8 shadow-2xs relative overflow-hidden">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+          <div class="flex items-start gap-4">
+            <div class="relative">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#1B4CA1] text-white flex items-center justify-center font-black text-2xl ring-4 ring-[#FFA730] shadow-md shrink-0">
+                {user.avatarInitials}
               </div>
+              <div class="absolute -bottom-1.5 -right-1.5 bg-emerald-500 text-white rounded-full p-1 border-2 border-white">
+                <CheckCircle2 class="w-3.5 h-3.5" />
+              </div>
+            </div>
 
-              <div class="mt-4 pt-2.5 border-t border-gray-800/60 flex items-center justify-between text-[10px] text-gray-500">
-                <span>{badge.date}</span>
-                <span class="text-emerald-400 flex items-center gap-1 font-medium">
-                  <CheckCircle2 class="w-3 h-3" /> Validated
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[10px] font-bold tracking-widest uppercase bg-[#1B4CA1] text-white px-2 py-0.5 rounded">
+                  Official Competency Passport
+                </span>
+                <span class="text-xs text-[#0A66C2] font-semibold flex items-center gap-1">
+                  <ShieldCheck class="w-3.5 h-3.5 text-emerald-600" /> CBC Accredited
+                </span>
+              </div>
+              <h2 class="text-2xl font-extrabold text-[#1B4CA1] tracking-tight">
+                {user.name}
+              </h2>
+              <p class="text-xs text-[#374151] mt-0.5 font-medium">
+                {user.designation} • {user.department}
+              </p>
+              <div class="flex flex-wrap items-center gap-3 mt-2 text-[11px] font-mono text-[#4B5563]">
+                <span class="bg-white px-2 py-0.5 rounded border border-[#C7D9FB] font-bold text-[#1B4CA1]">
+                  ID: {user.karmayogiId}
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded border border-[#C7D9FB] font-bold text-[#EF951E]">
+                  Cadre: {user.cadreLevel}
                 </span>
               </div>
             </div>
-          ))}
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <button
+              onClick={handleExportDossier}
+              class="px-4 py-2.5 bg-white hover:bg-slate-50 text-[#1B4CA1] border border-[#C7D9FB] rounded-xl text-xs font-bold transition-all shadow-2xs flex items-center gap-2 cursor-pointer"
+            >
+              <Download class="w-4 h-4 text-[#EF951E]" />
+              <span>{dossierGenerated ? 'Dossier Downloaded!' : 'Export FRAC Passport (PDF)'}</span>
+            </button>
+            <button
+              onClick={onOpenCopilot}
+              class="px-4 py-2.5 bg-[#EF951E] hover:bg-[#F08811] text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+            >
+              <Share2 class="w-4 h-4" />
+              <span>Ask Ira for APAR Evaluation</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* 3 Metrics: Light Blue Box, Skin Box, Yellow Box */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/* Metric 1: Light Blue Box */}
+        <div class="bg-[#EDF1F7] p-6 rounded-2xl border border-[#C7D9FB] shadow-2xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-[#1B4CA1] uppercase tracking-wider">Overall FRAC Readiness</span>
+            <TrendingUp class="w-4 h-4 text-[#1B4CA1]" />
+          </div>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-3xl font-extrabold text-[#1B4CA1]">{user.competencyReadiness}%</h3>
+            <span class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded">
+              {user.readinessDelta} this quarter
+            </span>
+          </div>
+          <p class="text-xs text-[#374151] mt-3">
+            Exceeds the 80% national benchmark for Joint Secretary empaneled officers.
+          </p>
+        </div>
+
+        {/* Metric 2: Skin Box */}
+        <div class="bg-[#FFE9CD] p-6 rounded-2xl border border-[#FFD2A1] shadow-2xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-[#C37024] uppercase tracking-wider">Cumulative Learning Hours</span>
+            <Calendar class="w-4 h-4 text-[#EF951E]" />
+          </div>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-3xl font-extrabold text-[#1B2133]">167 hrs</h3>
+            <span class="text-xs font-bold text-[#C37024] bg-white border border-[#FFD2A1] px-2 py-0.5 rounded">
+              +28 hrs vs target
+            </span>
+          </div>
+          <p class="text-xs text-[#374151] mt-3">
+            Accredited hours fulfilled under Mission Karmayogi continuous learning directive.
+          </p>
+        </div>
+
+        {/* Metric 3: Yellow Box */}
+        <div class="bg-[#FEF3C7] p-6 rounded-2xl border border-[#FDE68A] shadow-2xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-[#92400E] uppercase tracking-wider">Cadre Standing & Rank</span>
+            <Award class="w-4 h-4 text-[#DBA501]" />
+          </div>
+          <div class="flex items-baseline gap-2">
+            <h3 class="text-3xl font-extrabold text-[#92400E]">Top 8%</h3>
+            <span class="text-xs font-bold text-[#B45309] bg-white border border-[#FDE68A] px-2 py-0.5 rounded">
+              92nd %ile
+            </span>
+          </div>
+          <p class="text-xs text-[#B45309] mt-3 font-medium">
+            National Leadership Honor Roll (DARPG & Capacity Building Commission).
+          </p>
+        </div>
+      </div>
+
+      {/* Main Grid: Learning Analytics Chart & Official Badges */}
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        {/* Left 6 Columns: Monthly Learning Hours Graph */}
+        <div class="lg:col-span-6 bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-2xs">
+          <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#E5E7EB]">
+            <div>
+              <h3 class="text-base font-bold text-[#1B4CA1]">
+                Continuous Capacity Velocity
+              </h3>
+              <p class="text-xs text-[#4B5563] mt-0.5">
+                Monthly verified training hours against DoPT recommended baseline (20 hrs/mo)
+              </p>
+            </div>
+            <span class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded">
+              Compliant
+            </span>
+          </div>
+
+          <div class="h-56 flex items-end justify-between gap-3 pt-6 pb-2 px-4">
+            {months.map((m) => {
+              const heightPercent = Math.min(100, (m.hours / 45) * 100);
+              const targetPercent = (m.target / 45) * 100;
+
+              return (
+                <div key={m.name} class="flex-1 flex flex-col items-center gap-2 group relative">
+                  {/* Tooltip */}
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 bg-[#1B4CA1] text-white text-[10px] px-2 py-1 rounded shadow pointer-events-none whitespace-nowrap z-20">
+                    {m.hours} hrs completed (Target: {m.target}h)
+                  </div>
+
+                  <div class="w-full max-w-[36px] bg-[#EDF1F7] rounded-t-lg h-40 relative flex items-end overflow-hidden border border-[#C7D9FB]">
+                    {/* Target line */}
+                    <div
+                      class="absolute w-full border-t border-dashed border-[#EF951E] z-10"
+                      style={{ bottom: `${targetPercent}%` }}
+                    ></div>
+
+                    {/* Actual Bar */}
+                    <div
+                      class="w-full bg-[#1B4CA1] rounded-t-md transition-all duration-700 group-hover:bg-[#EF951E]"
+                      style={{ height: `${heightPercent}%` }}
+                    ></div>
+                  </div>
+
+                  <span class="text-xs font-bold text-[#374151] mt-1">{m.name}</span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-[#E5E7EB] flex items-center justify-between text-xs text-[#4B5563]">
+            <div class="flex items-center gap-4">
+              <span class="flex items-center gap-1.5">
+                <span class="w-3 h-3 rounded bg-[#1B4CA1]"></span> Verified Hours
+              </span>
+              <span class="flex items-center gap-1.5">
+                <span class="w-3 h-0.5 border-t border-dashed border-[#EF951E]"></span> Mandated Target
+              </span>
+            </div>
+            <span class="font-bold text-[#1B4CA1]">Total: 167 Hours</span>
+          </div>
+        </div>
+
+        {/* Right 6 Columns: Verified Competency Micro-Credentials */}
+        <div class="lg:col-span-6 bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-2xs">
+          <div class="flex items-center justify-between mb-4 pb-4 border-b border-[#E5E7EB]">
+            <div>
+              <h3 class="text-base font-bold text-[#1B4CA1]">
+                Verified Micro-Credentials ({badges.length})
+              </h3>
+              <p class="text-xs text-[#4B5563] mt-0.5">
+                Statutorily verified digital credentials endorsed on the National Knowledge Grid
+              </p>
+            </div>
+            <QrCode class="w-5 h-5 text-[#1B4CA1]" />
+          </div>
+
+          <div class="space-y-3">
+            {badges.map((b, i) => (
+              <div
+                key={i}
+                class={`p-3.5 rounded-xl border flex items-start justify-between gap-3 shadow-2xs ${b.color}`}
+              >
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-white border border-current/20 text-[#1B4CA1] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                    <Award class="w-4 h-4 text-[#EF951E]" />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h4 class="text-xs font-bold text-[#1B2133] line-clamp-1">{b.title}</h4>
+                      <span class="text-[9px] font-mono font-bold text-[#1B4CA1] bg-white border border-current/20 px-1 py-0.2 rounded">
+                        {b.code}
+                      </span>
+                    </div>
+                    <p class="text-[11px] text-[#4B5563] mt-0.5">{b.authority} • {b.date}</p>
+                  </div>
+                </div>
+
+                <div class="text-right shrink-0">
+                  <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded font-mono">
+                    DoPT Verified
+                  </span>
+                  <p class="text-[10px] text-[#0A66C2] font-semibold mt-1">
+                    {b.level}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-[#E5E7EB] flex items-center justify-between text-xs text-[#4B5563]">
+            <span class="flex items-center gap-1 text-emerald-700 font-medium">
+              <FileCheck class="w-4 h-4" /> All 4 credentials synchronized with DoPT HRMS
+            </span>
+            <button
+              onClick={() => onNavigate('library')}
+              class="text-[#EF951E] hover:text-[#C37024] font-bold"
+            >
+              Earn Next Credential →
+            </button>
+          </div>
         </div>
       </div>
     </section>

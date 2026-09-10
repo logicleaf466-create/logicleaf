@@ -16,6 +16,85 @@ export interface CompetencyItem {
   ruleReference: string;
 }
 
+export interface CourseUnit {
+  id: string;
+  unitNumber: number;
+  title: string;
+  duration: string;
+  summary: string;
+  topics: string[];
+  readingNotes: string;
+  practicalChecklist?: string[];
+  caseStudy?: {
+    title: string;
+    scenario: string;
+    ruling: string;
+  };
+  assessment?: {
+    question: string;
+    options: string[];
+    correctIndex: number;
+    explanation: string;
+  };
+}
+
+export interface StatutoryReference {
+  actName: string;
+  sectionOrRule: string;
+  relevance: string;
+}
+
+export interface ExtractedMediaItem {
+  id: string;
+  name: string;
+  mimeType: string;
+  contentType: string;
+  duration?: string | number;
+  artifactUrl?: string;
+  downloadUrl?: string;
+  streamingUrl?: string;
+  description?: string;
+  appIcon?: string;
+  posterImage?: string;
+}
+
+export interface ExtractedCompetency {
+  competencyArea?: string;
+  competencyAreaId?: number;
+  competencyAreaDescription?: string;
+  competencyTheme?: string;
+  competencyThemeId?: number;
+  competecnyThemeDescription?: string;
+  competencyThemeType?: string;
+  competencySubTheme?: string;
+  competencySubThemeId?: number;
+  competecnySubThemeDescription?: string;
+}
+
+export interface RawExtractedCourse {
+  id: string;
+  name: string;
+  description: string;
+  creator?: string;
+  source?: string;
+  organisation?: string[] | string;
+  duration?: number;
+  posterImage?: string;
+  appIcon?: string;
+  mimeType?: string;
+  contentType?: string;
+  keywords?: string[];
+  competencies_v5?: ExtractedCompetency[];
+  language?: string[];
+  createdOn?: string;
+  lastUpdatedOn?: string;
+  childNodesCount?: number;
+  leafNodesCount?: number;
+  childNodes?: string[];
+  leafNodes?: string[];
+  subItems?: ExtractedMediaItem[];
+}
+
 export interface LearningModule {
   id: string;
   title: string;
@@ -30,6 +109,26 @@ export interface LearningModule {
   type: 'Video Lecture' | 'Interactive Masterclass' | 'Policy Brief' | 'Case Study';
   description: string;
   keyTakeaways: string[];
+  externalUrl?: string;
+  durationDisplay?: string;
+  thumbnailTheme?: 'posh' | 'fire-safety' | 'ndrf' | 'swachhata' | 'default';
+  enrolledCount?: string;
+  officialCircularRef?: string;
+  language?: string;
+  targetAudience?: string;
+  curriculum?: CourseUnit[];
+  statutoryReferences?: StatutoryReference[];
+  faqs?: { question: string; answer: string }[];
+  // Extracted official data fields
+  rawExtracted?: RawExtractedCourse;
+  extractedVideos?: ExtractedMediaItem[];
+  extractedResources?: ExtractedMediaItem[];
+  posterImage?: string;
+  appIcon?: string;
+  keywords?: string[];
+  competencies?: ExtractedCompetency[];
+  createdOn?: string;
+  lastUpdatedOn?: string;
 }
 
 export interface QuizQuestion {
@@ -49,6 +148,9 @@ export interface UserProfile {
   designation: string;
   department: string;
   avatarInitials: string;
+  cadreLevel: string;
+  karmayogiId: string;
+  karmaPoints: number;
   competencyReadiness: number;
   readinessDelta: string;
   activePath: string;

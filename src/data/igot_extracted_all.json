@@ -1,0 +1,723 @@
+{
+  "do_113569878939262976132": {
+    "id": "do_113569878939262976132",
+    "name": "Prevention of Sexual Harassment of Women at Workplace",
+    "description": "This course is designed to educate all employees on the critical issue of preventing sexual harassment in the workplace. It provides a detailed examination of the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013. The content addresses the importance of creating a safe, respectful, and professional environment for all, which is fundamental to organizational health and employee well-being. Key learning areas include a clear definition of sexual harassment with real-world examples, the distinction between 'quid pro quo' and a 'hostile work environment', and the legal obligations placed upon employers. Learners will gain a thorough understanding of the complaint mechanism, including the formation and functions of the Internal Complaints Committee (ICC), the step-by-step inquiry process, and the potential penalties for non-compliance. By completing this course, participants will be equipped to identify inappropriate behavior, understand their rights and duties, and contribute to a culture of zero tolerance for sexual harassment, ensuring a legally compliant and secure workplace.",
+    "creator": "ISTM ISTM",
+    "source": "Institute of Secretariat Training and Management",
+    "organisation": [
+      "Institute of Secretariat Training and Management"
+    ],
+    "duration": "6719",
+    "posterImage": "https://storage.googleapis.com/igotprod/content/do_113569878939262976132/artifact/do_113601295107096576163_1660314344438_posh1660314340593.thumb.png",
+    "appIcon": "https://storage.googleapis.com/igotprod/collection/do_113569878939262976132/artifact/do_113601295107096576163_1660314344438_posh1660314340593.thumb.thumb.thumb.png",
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "contentType": "Course",
+    "keywords": [
+      "POSH Act 2013",
+      "Sexual Harassment",
+      "Workplace Safety",
+      "Women's Rights",
+      "Internal Complaints Committee",
+      "ICC",
+      "Employee Conduct",
+      "Grievance Redressal",
+      "Legal Compliance",
+      "Workplace Ethics",
+      "Gender Equality",
+      "Vishaka Guidelines",
+      "Hostile Work Environment"
+    ],
+    "competencies_v5": [
+      {
+        "competencyArea": "Functional",
+        "competencyAreaDescription": "Functional Competency Area",
+        "competencyAreaId": 56,
+        "competencyTheme": "Establishment & HR",
+        "competencyThemeDescription": "Establishment & HR competency Theme",
+        "competencyThemeId": 101,
+        "competencyThemeType": "Core",
+        "competencySubTheme": "Handling matters of Prevention of Sexual Harassment Policy",
+        "competencySubThemeId": 105,
+        "competencySubThemeDescription": "Handling matters of Prevention of Sexual Harassment Policy Competency Sub-Theme"
+      }
+    ],
+    "language": [
+      "English"
+    ],
+    "createdOn": "2022-06-29T10:39:22.855+0530",
+    "lastUpdatedOn": "2025-01-20T12:42:41.228+0530",
+    "childNodesCount": 15,
+    "leafNodesCount": 12,
+    "childNodes": [
+      "do_113569880104288256138",
+      "do_113569879733968896136",
+      "do_113569888573227008128",
+      "do_113569916753027072130",
+      "do_113569925772673024138",
+      "do_113569928860958720139",
+      "do_113569919582068736136",
+      "do_113569932275662848140",
+      "do_113569934793818112133",
+      "do_113569936985399296131",
+      "do_113569940030128128139",
+      "do_113569939675971584133",
+      "do_113569945177841664140",
+      "do_113569952121126912134",
+      "do_113569958119809024135"
+    ],
+    "leafNodes": [
+      "do_113569958119809024135",
+      "do_113569928860958720139",
+      "do_113569945177841664140",
+      "do_113569925772673024138",
+      "do_113569916753027072130",
+      "do_113569932275662848140",
+      "do_113569936985399296131",
+      "do_113569934793818112133",
+      "do_113569940030128128139",
+      "do_113569888573227008128",
+      "do_113569880104288256138",
+      "do_113569952121126912134"
+    ],
+    "subItems": [
+      {
+        "id": "do_113569880104288256138",
+        "name": "Watch_Module_1",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "436",
+        "artifactUrl": "https://igotkarmayogi.gov.in/content-store/content/do_113569880104288256138/artifact/do_113569880104288256138_1656480021397_l1_watch1656480013988.mp4",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569880104288256138/watch_module_1_1660314762760_do_113569880104288256138_1.0.ecar",
+        "description": "Watch_Module_1"
+      },
+      {
+        "id": "do_113569888573227008128",
+        "name": "Think_Module_1",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "590",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569888573227008128/artifact/do_113569888573227008128_1656483523451_l1_think1656483520821.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569888573227008128/think_module_1_1660314818884_do_113569888573227008128_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569888573227008128-latest",
+        "description": "Think_Module_1"
+      },
+      {
+        "id": "do_113569916753027072130",
+        "name": "Do_Module_1",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "600",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569916753027072130/artifact/do_113569916753027072130_1656484107076_l1_do11656484103145.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569916753027072130/do_module_1_1660314867995_do_113569916753027072130_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569916753027072130-latest",
+        "description": "Do_Module_1"
+      },
+      {
+        "id": "do_113569925772673024138",
+        "name": "Explore_Module_1",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "60",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569925772673024138/artifact/do_113569925772673024138_1656485115896_l1_explore1656485114112.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569925772673024138/explore_module_1_1660314776995_do_113569925772673024138_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569925772673024138-latest",
+        "description": "Explore_Module_1"
+      },
+      {
+        "id": "do_113569928860958720139",
+        "name": "Watch_Module_2",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "496",
+        "artifactUrl": "https://igotkarmayogi.gov.in/content-store/content/do_113569928860958720139/artifact/do_113569928860958720139_1656485587514_l2_watch1656485567917.mp4",
+        "downloadUrl": "",
+        "description": "Watch_Module_2"
+      },
+      {
+        "id": "do_113569932275662848140",
+        "name": "Think_Module_2",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "600",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569932275662848140/artifact/do_113569932275662848140_1656486052590_l2_think1656486049267.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569932275662848140/think_module_2_1660314959745_do_113569932275662848140_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569932275662848140-latest",
+        "description": "Think_Module_2"
+      },
+      {
+        "id": "do_113569934793818112133",
+        "name": "Do_Module_2",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "600",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569934793818112133/artifact/do_113569934793818112133_1656486304000_l2_do1656486299109.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569934793818112133/do_module_2_1660315011712_do_113569934793818112133_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569934793818112133-latest",
+        "description": "Do_Module_2"
+      },
+      {
+        "id": "do_113569936985399296131",
+        "name": "Explore_Module_2",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "60",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569936985399296131/artifact/do_113569936985399296131_1656486611843_l2_explore1656486608711.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569936985399296131/explore_module_2_1660314919135_do_113569936985399296131_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569936985399296131-latest",
+        "description": "Explore_Module_2"
+      },
+      {
+        "id": "do_113569940030128128139",
+        "name": "Watch_Module_3",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "397",
+        "artifactUrl": "https://igotkarmayogi.gov.in/content-store/content/do_113569940030128128139/artifact/do_113569940030128128139_1656486921688_l3_watch1656486905439.mp4",
+        "downloadUrl": "",
+        "description": "Watch_Module_3"
+      },
+      {
+        "id": "do_113569945177841664140",
+        "name": "Think_Module_3",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "600",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569945177841664140/artifact/do_113569945177841664140_1656487992380_l3_think1656487989663.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569945177841664140/think_module_3_1660315103706_do_113569945177841664140_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569945177841664140-latest",
+        "description": "Think_Module_3"
+      },
+      {
+        "id": "do_113569952121126912134",
+        "name": "Do_Module_3",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "600",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569952121126912134/artifact/do_113569952121126912134_1656488912881_l3_do1656488907681.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569952121126912134/do_module_3_1660315152954_do_113569952121126912134_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569952121126912134-latest",
+        "description": "Do_Module_3"
+      },
+      {
+        "id": "do_113569958119809024135",
+        "name": "Explore_Module_3",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "60",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_113569958119809024135/artifact/do_113569958119809024135_1656489216684_l3_explore1656489214912.zip",
+        "downloadUrl": "https://storage.googleapis.com/igotprod/ecar_files/do_113569958119809024135/explore_module_3_1660315065277_do_113569958119809024135_1.0.ecar",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_113569958119809024135-latest",
+        "description": "Explore_Module_3"
+      }
+    ]
+  },
+  "do_1143052789530787841562": {
+    "id": "do_1143052789530787841562",
+    "name": "Fire Safety in Healthcare Facilities",
+    "description": "Healthcare facilities present unique and complex challenges for fire safety due to the presence of vulnerable patients, high-value equipment, and combustible materials. This course is designed to equip healthcare professionals, administrators, and support staff with the critical knowledge and skills to manage these risks effectively. The curriculum delves into the fundamental causes of hospital fires, different fire classifications, and the proper use of fire suppression equipment like extinguishers and alarm systems. A significant focus is placed on proactive and reactive strategies, including the development and implementation of robust fire safety and evacuation plans, with special attention to patient prioritization and movement challenges. The course also covers the importance of regulatory compliance with codes like the National Building Code (NBC) 2016 and the necessity of conducting regular mock drills to test and refine emergency procedures. Upon completion, participants will be prepared to lead fire safety initiatives, mitigate risks, and foster a resilient safety culture within their facilities.",
+    "creator": "Sandeep Dhanda",
+    "source": "Ministry of Health and Family Welfare",
+    "organisation": [
+      "Ministry of Health and Family Welfare"
+    ],
+    "duration": "4964",
+    "posterImage": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143052789324513281133/artifact/do_1143052789324513281133_1746249871430_draft-thumbnail1746249869810.png",
+    "appIcon": "https://storage.googleapis.com/igotprod/collection/do_1143052789530787841562/artifact/do_1143052789324513281133_1746249871430_draft-thumbnail1746249869810.thumb.png",
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "contentType": "Course",
+    "keywords": [
+      "Fire Safety",
+      "Healthcare Safety",
+      "Hospital Safety",
+      "Emergency Preparedness",
+      "Disaster Management",
+      "Evacuation Planning",
+      "Fire Prevention",
+      "Fire Extinguishers",
+      "Risk Mitigation",
+      "Patient Safety",
+      "Regulatory Compliance",
+      "Mock Drills",
+      "Workplace Safety",
+      "Crisis Response"
+    ],
+    "language": [
+      "English"
+    ],
+    "createdOn": "2025-05-03T10:54:32.205+0530",
+    "lastUpdatedOn": "2025-05-06T12:20:33.831+0530",
+    "childNodesCount": 19,
+    "leafNodesCount": 13,
+    "childNodes": [
+      "do_114305359321669632119",
+      "do_1143053184318504961464",
+      "do_11430536813626163212188",
+      "do_1143054204704768001621",
+      "do_1143054156642222081619",
+      "do_11430542210249523213733",
+      "do_114305433714778112120",
+      "do_1143054336096337921568",
+      "do_11430543548521676813738",
+      "do_114305312142696448117",
+      "do_1143053094764052481462",
+      "do_11430531445745254412179",
+      "do_11430544266153164813749",
+      "do_114305377663672320124",
+      "do_1143053775051980801134",
+      "do_11430540340180582412199",
+      "do_114305285745106944122",
+      "do_1143052833832304641564",
+      "do_11430529925803212812168"
+    ],
+    "leafNodes": [
+      "do_114305359321669632119",
+      "do_11430540340180582412199",
+      "do_11430531445745254412179",
+      "do_114305433714778112120",
+      "do_11430529925803212812168",
+      "do_11430542210249523213733",
+      "do_11430543548521676813738",
+      "do_1143054204704768001621",
+      "do_11430536813626163212188",
+      "do_114305312142696448117",
+      "do_114305377663672320124",
+      "do_114305285745106944122",
+      "do_11430544266153164813749"
+    ],
+    "subItems": [
+      {
+        "id": "do_114305359321669632119",
+        "name": "Action to be taken in the event of a fire accident ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "568",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_114305359321669632119/artifact/do_114305359321669632119_1746259720893_module-iii1746259683446.mp4"
+      },
+      {
+        "id": "do_11430536813626163212188",
+        "name": "Reflection Quiz ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "PracticeResource",
+        "description": "1) If the given time runs out, the answer will be auto submitted.\n\n2) Skipped questions can be attempted again before submitting. \n\n3) No negative marking. "
+      },
+      {
+        "id": "do_1143054204704768001621",
+        "name": "Planning for and Conduct of Fire Drills in Health Facilities",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "281",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143054204704768001621/artifact/do_1143054204704768001621_1746267186741_module-v1746267148001.mp4"
+      },
+      {
+        "id": "do_11430542210249523213733",
+        "name": "Reflection Quiz ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "PracticeResource",
+        "description": "1) If the given time runs out, the answer will be auto submitted. \n\n2) Skipped questions can be attempted again before submitting. \n\n3) No negative marking. "
+      },
+      {
+        "id": "do_114305433714778112120",
+        "name": "Take home message and introspection ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "464",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_114305433714778112120/artifact/do_114305433714778112120_1746268802908_module-vi1746268764789.mp4"
+      },
+      {
+        "id": "do_11430543548521676813738",
+        "name": "Reflection Quiz ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "PracticeResource",
+        "description": "1) If the given time runs out, the answer will be auto submitted.\n\n2) Skipped questions can be attempted again before submitting. \n\n3) No negative marking. \n"
+      },
+      {
+        "id": "do_114305312142696448117",
+        "name": "Fire Extinguisher",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "215",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_114305312142696448117/artifact/do_114305312142696448117_1746253958312_module-ii-1746253924202.mp4"
+      },
+      {
+        "id": "do_11430531445745254412179",
+        "name": "Reflection Quiz ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "PracticeResource",
+        "description": "1) If the given time runs out, the answer will be auto submitted. \n\n2) Skipped questions can be attempted again before submitting. \n\n3) No negative marking "
+      },
+      {
+        "id": "do_11430544266153164813749",
+        "name": "  Final Assessment ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "SelfAssess",
+        "description": "1) If the given time runs out, the answer will be auto submitted. \n\n2) Skipped questions can be attempted again before submitting. \n\n3) No negative marking. "
+      },
+      {
+        "id": "do_114305377663672320124",
+        "name": "Regulatory and operational issues for preventing and mitigating risks ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "422",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_114305377663672320124/artifact/do_114305377663672320124_1746261956365_module-iv1746261922327.mp4"
+      },
+      {
+        "id": "do_11430540340180582412199",
+        "name": "Reflection Quiz ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "PracticeResource",
+        "description": "1) If the given time runs out, the answer will be auto submitted. \n\n2) Skipped questions can be attempted again before submitting. \n\n3) No negative marking. "
+      },
+      {
+        "id": "do_114305285745106944122",
+        "name": "Introduction to Fire Safety",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "614",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_114305285745106944122/artifact/do_114305285745106944122_1746250746731_module-i-modified_r111746250701538.mp4"
+      },
+      {
+        "id": "do_11430529925803212812168",
+        "name": "Reflection Quiz ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "PracticeResource",
+        "description": "1) If the given time runs out, the answer will be auto submitted. \n\n2) Skipped questions can be attempted again before submitting.\n\n3) No negative marking. "
+      }
+    ]
+  },
+  "do_1143166853070028801812": {
+    "id": "do_1143166853070028801812",
+    "name": "Civil Defence Services (नागरिक सुरक्षा सेवाएँ)",
+    "description": "यह पाठ्यक्रम भारत में नागरिक सुरक्षा के महत्वपूर्ण ढांचे की विस्तृत समझ प्रदान करने के लिए डिज़ाइन किया गया है। यह बताता है कि कैसे नागरिक सुरक्षा संगठन आपातकालीन स्थितियों और आपदाओं के दौरान नागरिकों की सुरक्षा सुनिश्चित करने के लिए कार्य करता है। पाठ्यक्रम मुख्यालय सेवाओं, संचार, वार्डन सेवाओं, हताहत सेवाओं, अग्निशमन, बचाव, और आपूर्ति श्रृंखला प्रबंधन सहित विभिन्न प्रभागों के कार्यों का गहन विश्लेषण करता है। शिक्षार्थी जानेंगे कि ये सभी सेवाएं संकट के समय जीवन और संपत्ति की रक्षा के लिए कैसे समन्वय करती हैं। यह पाठ्यक्रम आम नागरिकों, स्वयंसेvकों और सरकारी अधिकारियों को आपदाओं के लिए तैयार रहने, प्रभावी ढंग से प्रतिक्रिया करने और समुदाय के लचीलेपन में योगदान करने के लिए आवश्यक ज्ञान से लैस करेगा। इसका उद्देश्य शिक्षार्थियों में सामाजिक जिम्मेदारी की भावना पैदा करना और उन्हें अपने समुदायों को सुरक्षित बनाने में सक्रिय भूमिका निभाने के लिए प्रेरित करना है।",
+    "creator": "SATISH KUMAR SINGH",
+    "source": "National Disaster Response Force (NDRF)",
+    "organisation": [
+      "National Disaster Response Force (NDRF)"
+    ],
+    "duration": "4592",
+    "posterImage": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166852991467521615/artifact/do_1143166852991467521615_1747642248614_21747642249099.png",
+    "appIcon": "https://storage.googleapis.com/igotprod/collection/do_1143166853070028801812/artifact/do_1143166852991467521615_1747642248614_21747642249099.thumb.png",
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "contentType": "Course",
+    "keywords": [
+      "नागरिक सुरक्षा",
+      "आपदा प्रबंधन",
+      "बचाव अभियान",
+      "अग्निशमन",
+      "प्राथमिक चिकित्सा",
+      "आपातकालीन सेवाएं",
+      "सार्वजनिक सुरक्षा",
+      "राहत कार्य",
+      "स्वयंसेवा",
+      "Civil Defence",
+      "Disaster Management",
+      "Rescue Operations",
+      "First Aid",
+      "Emergency Response"
+    ],
+    "language": [
+      "Hindi"
+    ],
+    "createdOn": "2025-05-19T13:40:49.393+0530",
+    "lastUpdatedOn": "2025-05-19T16:26:03.886+0530",
+    "childNodesCount": 25,
+    "leafNodesCount": 13,
+    "childNodes": [
+      "do_11431669571100672011199",
+      "do_11431669562145996811154",
+      "do_1143167011808706561818",
+      "do_1143167010683207681623",
+      "do_1143166939303116801617",
+      "do_1143166938132561921653",
+      "do_11431670430237491218561",
+      "do_1143166992157245441620",
+      "do_11431669911070310411156",
+      "do_11431670013850419211159",
+      "do_1143167000275927041621",
+      "do_1143166904036720641813",
+      "do_11431668797041049611192",
+      "do_1143166922245160961656",
+      "do_11431669201444044811194",
+      "do_1143166932565114881652",
+      "do_11431669297942528011196",
+      "do_1143166953082634241814",
+      "do_1143166952219197441661",
+      "do_11431669496588697611198",
+      "do_1143166948410408961659",
+      "do_1143166996508753921816",
+      "do_1143166995591413761664",
+      "do_1143166943783731201655",
+      "do_1143166942727782401657"
+    ],
+    "leafNodes": [
+      "do_1143166943783731201655",
+      "do_11431670430237491218561",
+      "do_1143166939303116801617",
+      "do_11431670013850419211159",
+      "do_1143166932565114881652",
+      "do_1143166953082634241814",
+      "do_1143167011808706561818",
+      "do_1143166904036720641813",
+      "do_1143166992157245441620",
+      "do_1143166922245160961656",
+      "do_11431669496588697611198",
+      "do_11431669571100672011199",
+      "do_1143166996508753921816"
+    ],
+    "subItems": [
+      {
+        "id": "do_11431669571100672011199",
+        "name": "डिपो एवं परिवहन सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "371",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_11431669571100672011199/artifact/do_11431669571100672011199_1747643537926_08-ddipo-evn-privhn-sevaaen1747643520079.mp4"
+      },
+      {
+        "id": "do_1143167011808706561818",
+        "name": "शव निस्तारण सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "319",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143167011808706561818/artifact/do_1143167011808706561818_1747644199040_12-shv-nistaarnn-sevaaen1747644187755.mp4"
+      },
+      {
+        "id": "do_1143166939303116801617",
+        "name": "हताहत सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "386",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166939303116801617/artifact/do_1143166939303116801617_1747643324754_04-htaaht-sevaaen1747643302764.mp4"
+      },
+      {
+        "id": "do_11431670430237491218561",
+        "name": "आकलन      ",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "SelfAssess",
+        "description": "NIL      "
+      },
+      {
+        "id": "do_1143166992157245441620",
+        "name": "आपूर्ति सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "334",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166992157245441620/artifact/do_1143166992157245441620_1747643957965_09-aapuurti-sevaaen1747643947937.mp4"
+      },
+      {
+        "id": "do_11431670013850419211159",
+        "name": "कल्याण सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "390",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_11431670013850419211159/artifact/do_11431670013850419211159_1747644147834_11-klyaann-sevaaen1747644060521.mp4"
+      },
+      {
+        "id": "do_1143166904036720641813",
+        "name": "मुख्यालय सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "360",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166904036720641813/artifact/do_1143166904036720641813_1747642893360_01-mukhyaaly-sevaaen1747642872278.mp4"
+      },
+      {
+        "id": "do_1143166922245160961656",
+        "name": "संचार सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "199",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166922245160961656/artifact/do_1143166922245160961656_1747643107013_02-sncaar-sevaaen1747643094897.mp4"
+      },
+      {
+        "id": "do_1143166932565114881652",
+        "name": "वार्डन सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "372",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166932565114881652/artifact/do_1143166932565114881652_1747643258926_03-vaarddn-sevaaen1747643220478.mp4"
+      },
+      {
+        "id": "do_1143166953082634241814",
+        "name": "बचाव सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "270",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166953082634241814/artifact/do_1143166953082634241814_1747643490098_07-bcaav-sevaaen1747643470922.mp4"
+      },
+      {
+        "id": "do_11431669496588697611198",
+        "name": "प्रशिक्षण सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "337",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_11431669496588697611198/artifact/do_11431669496588697611198_1747643442121_06-prshikssnn-sevaaen1747643429144.mp4"
+      },
+      {
+        "id": "do_1143166996508753921816",
+        "name": "साल्वेज सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "335",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166996508753921816/artifact/do_1143166996508753921816_1747644025273_10-saalvej-sevaaen1747644001023.mp4"
+      },
+      {
+        "id": "do_1143166943783731201655",
+        "name": "अग्निशमन सेवाएँ",
+        "mimeType": "video/mp4",
+        "contentType": "Resource",
+        "duration": "319",
+        "artifactUrl": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1143166943783731201655/artifact/do_1143166943783731201655_1747643391124_05-agnishmn-sevaaen1747643357409.mp4"
+      }
+    ]
+  },
+  "do_1141533857591132161321": {
+    "id": "do_1141533857591132161321",
+    "name": "स्वच्छता ही सेवा - 2024 पर प्रशिक्षण मॉड्यूल",
+    "description": "यह प्रशिक्षण पाठ्यक्रम 'स्वच्छता ही सेवा (SHS) 2024' अभियान की विस्तृत जानकारी प्रदान करने के लिए डिज़ाइन किया गया है, जिसे आवासन एवं शहरी कार्य मंत्रालय (MoHUA) द्वारा शुरू किया गया है। इस वर्ष की थीम 'स्वभाव स्वच्छता - संस्कार स्वच्छता' है, जो स्वच्छता को हमारे दैनिक जीवन और सांस्कृतिक मूल्यों का एक अभिन्न अंग बनाने पर जोर देती है। पाठ्यक्रम में अभियान के तीन प्रमुख स्तंभों पर चर्चा की गई है: स्वच्छता के लिए श्रमदान, जन भागीदारी को बढ़ावा देना, और सफाई मित्रों की सुरक्षा सुनिश्चित करना। शिक्षार्थी समझेंगे कि कैसे विभिन्न हितधारक, जैसे कि मंत्रालय, शहरी स्थानीय निकाय, नागरिक समूह और निजी संगठन, 'कचरा मुक्त भारत' के दृष्टिकोण को साकार करने के लिए मिलकर काम कर सकते हैं। यह पाठ्यक्रम प्रतिभागियों को अपने समुदायों में स्वच्छता गतिविधियों को प्रभावी ढंग से आयोजित करने और एक स्थायी व्यवहार परिवर्तन लाने के लिए प्रोत्साहित करेगा।",
+    "creator": "Swachh Bharat Mission (urban)",
+    "source": "Ministry of Housing and Urban Affairs (MoHUA)",
+    "organisation": [
+      "Ministry of Housing and Urban Affairs (MoHUA)"
+    ],
+    "duration": "1200",
+    "posterImage": "https://portal.igotkarmayogi.gov.in/content-store/content/do_1141534128023142401625/artifact/do_1141534128023142401625_1727711523834_whatsappimage20240930at16.26.411727711528039.jpeg",
+    "appIcon": "https://storage.googleapis.com/igotprod/collection/do_1141533857591132161321/artifact/do_1141534128023142401625_1727711523834_whatsappimage20240930at16.thumb.26.thumb.411727711528039.thumb.jpeg",
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "contentType": "Course",
+    "keywords": [
+      "स्वच्छता ही सेवा",
+      "स्वच्छ भारत मिशन",
+      "कचरा मुक्त भारत",
+      "शहरी स्वच्छता",
+      "अपशिष्ट प्रबंधन",
+      "नागरिक भागीदारी",
+      "सफाई मित्र",
+      "सामुदायिक स्वच्छता",
+      "जन आंदोलन",
+      "स्वच्छता अभियान",
+      "सार्वजनिक स्वास्थ्य",
+      "शहरी विकास"
+    ],
+    "competencies_v5": [
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Creativity & Innovation",
+        "competencyThemeId": 38,
+        "competecnyThemeDescription": "Creativity & Innovation competency Theme",
+        "competencyThemeType": "Leadership",
+        "competencySubTheme": "Transformation Orientation",
+        "competencySubThemeId": 40,
+        "competecnySubThemeDescription": "Transformation Orientation Competency Sub-Theme"
+      },
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Collaboration",
+        "competencyThemeId": 25,
+        "competecnyThemeDescription": "Collaboration competency Theme",
+        "competencyThemeType": "Core",
+        "competencySubTheme": "Knowledge Sharing",
+        "competencySubThemeId": 28,
+        "competecnySubThemeDescription": "Knowledge Sharing Competency Sub-Theme"
+      },
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Operational Excellence",
+        "competencyThemeId": 33,
+        "competecnyThemeDescription": "Operational Excellence competency Theme",
+        "competencyThemeType": "Core",
+        "competencySubTheme": "Resource Management",
+        "competencySubThemeId": 35,
+        "competecnySubThemeDescription": "Resource Management Competency Sub-Theme"
+      },
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Team Leadership",
+        "competencyThemeId": 49,
+        "competecnyThemeDescription": "Team Leadership competency Theme",
+        "competencyThemeType": "Leadership",
+        "competencySubTheme": "Inspiring others",
+        "competencySubThemeId": 52,
+        "competecnySubThemeDescription": "Inspiring others Competency Sub-Theme"
+      },
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Team Leadership",
+        "competencyThemeId": 49,
+        "competecnyThemeDescription": "Team Leadership competency Theme",
+        "competencyThemeType": "Leadership",
+        "competencySubTheme": "Mentoring",
+        "competencySubThemeId": 50,
+        "competecnySubThemeDescription": "Mentoring Competency Sub-Theme"
+      },
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Self-Awareness",
+        "competencyThemeId": 2,
+        "competecnyThemeDescription": "Self-Awareness competency Theme",
+        "competencyThemeType": "Core",
+        "competencySubTheme": "Self-Analysis",
+        "competencySubThemeId": 3,
+        "competecnySubThemeDescription": "Self-Analysis Competency Sub-Theme"
+      },
+      {
+        "competencyArea": "Behavioural",
+        "competencyAreaId": 1,
+        "competencyAreaDescription": "Behavioural Competency Area",
+        "competencyTheme": "Strategic Leadership",
+        "competencyThemeId": 41,
+        "competecnyThemeDescription": "Strategic Leadership competency Theme",
+        "competencyThemeType": "Leadership",
+        "competencySubTheme": "Sustainable mindset",
+        "competencySubThemeId": 45,
+        "competecnySubThemeDescription": "Sustainable mindset Competency Sub-Theme"
+      }
+    ],
+    "language": [
+      "Hindi"
+    ],
+    "createdOn": "2024-09-30T20:27:02.552+0530",
+    "lastUpdatedOn": "2024-10-01T16:19:49.039+0530",
+    "childNodesCount": 3,
+    "leafNodesCount": 2,
+    "childNodes": [
+      "do_1141533862295633921623",
+      "do_1141539502775910401729",
+      "do_114153388896780288112"
+    ],
+    "leafNodes": [
+      "do_1141533862295633921623",
+      "do_114153388896780288112"
+    ],
+    "subItems": [
+      {
+        "id": "do_1141533862295633921623",
+        "name": "स्वच्छता ही सेवा - 2024 पर प्रशिक्षण मॉड्यूल",
+        "mimeType": "application/vnd.ekstep.html-archive",
+        "contentType": "Resource",
+        "duration": "900",
+        "artifactUrl": "https://storage.googleapis.com/igotprod/content/do_1141533862295633921623/artifact/do_1141533862295633921623_1727708440240_shs2024_hindi1727708429264.zip",
+        "streamingUrl": "https://storage.googleapis.com/igotprod/content/html/do_1141533862295633921623-latest",
+        "description": "आवासन एवं शहरी कार्य मंत्रालय (MoHUA) ने स्वच्छता ही सेवा (SHS) 2024 पर जागरूकता प्रशिक्षण पाठ्यक्रम शुरू किया है। यह पाठ्यक्रम सभी मंत्रालयों, राज्यों/केंद्र शासित प्रदेशों, शहरी स्थानीय निकायों के अधिकारियों, क्षेत्रीय इकाइयों और नागरिकों के लिए तैयार किया गया है, ताकि सभी स्वच्छ भारत मिशन के कचरा मुक्त भारत के लक्ष्य में सक्रिय रूप से शामिल हो सकें। इस पाठ्यक्रम का उद्देश्य लोगों को अपने दैनिक जीवन में स्वच्छता को शामिल करने के लिए प्रेरित करना और उन्हें सक्षम बनाना है, जिससे स्वच्छता, स्वास्थ्य और अपशिष्ट प्रबंधन के लिए ‘संपूर्ण समाज के दृष्टिकोण’ को मजबूती मिल सके।"
+      },
+      {
+        "id": "do_114153388896780288112",
+        "name": "स्वच्छता ही सेवा - 2024 पर प्रशिक्षण मॉड्यूल",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "contentType": "SelfAssess",
+        "description": "<p>सभी&nbsp;प्रश्न&nbsp;अनिवार्य&nbsp;हैं।&nbsp;मूल्यांकन&nbsp;में&nbsp;10&nbsp;प्रश्न&nbsp;हैं,&nbsp;मॉड्यूल&nbsp;पूरा&nbsp;करने&nbsp;के&nbsp;लिए&nbsp;आपको&nbsp;7&nbsp;प्रश्न&nbsp;पास&nbsp;करने&nbsp;होंगे।</p>\n"
+      }
+    ]
+  }
+}

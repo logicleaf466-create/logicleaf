@@ -1,6 +1,6 @@
 {
   "name": "Ira AI",
-  "description": "Executive Control Center for Civil Services Competency Gap Analysis, Learning Roadmaps, AI Quiz Studio, and Progress Tracking.",
+  "description": "iGOT Karmayogi Bharat civil services capacity building portal with Ira AI for FRAC competency gap analysis, learning pathways, and governance scenario assessments.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

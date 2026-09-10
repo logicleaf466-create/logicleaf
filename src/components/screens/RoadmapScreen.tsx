@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 import { LearningModule, ScreenId } from '../../types';
 import {
-  Compass,
   Sparkles,
   Clock,
-  CheckCircle2,
-  Play,
   Calendar,
-  Layers,
-  ChevronRight,
   RefreshCw,
-  Award
+  ShieldCheck,
 } from 'lucide-react';
 
 interface RoadmapScreenProps {
   modules: LearningModule[];
   onNavigate: (screen: ScreenId) => void;
   onOpenModule: (module: LearningModule) => void;
+  onOpenCopilot?: () => void;
 }
 
 export const RoadmapScreen: React.FC<RoadmapScreenProps> = ({
@@ -34,228 +30,217 @@ export const RoadmapScreen: React.FC<RoadmapScreenProps> = ({
       setIsRecalibrating(false);
       setRecalibrationToast(true);
       setTimeout(() => setRecalibrationToast(false), 3500);
-    }, 1200);
+    }, 1000);
   };
 
   const phases = [
     {
       phaseNumber: 1,
-      title: 'Immediate High-Priority Interventions',
+      title: 'Workplace Governance & Life Safety',
       timeframe: 'Weeks 1 - 3',
-      objective: 'Close critical statutory compliance gaps in e-Office 7.0 and GFR 2024 emergency procurement thresholds.',
-      moduleIds: ['mod-1', 'mod-2'],
+      objective: 'Fulfill mandatory statutory certifications in PoSH Act 2013 and NBC hospital fire protection protocols.',
+      moduleIds: ['do_113569878939262976132', 'do_1143052789530787841562'],
       badge: 'Critical Path',
+      kpReward: 150,
+      phaseBoxClass: 'bg-[#EDF1F7] border-[#C7D9FB]',
+      pillClass: 'bg-[#1B4CA1] text-white',
     },
     {
       phaseNumber: 2,
-      title: 'Q3 Policy & Governance Strategy',
+      title: 'Disaster Management & Emergency Command',
       timeframe: 'Weeks 4 - 7',
-      objective: 'Strengthen inter-ministerial coordination, Cabinet Memorandum structuring, and ethical AI oversight.',
-      moduleIds: ['mod-5', 'mod-4'],
+      objective: 'Strengthen civil defence warden mobilization, emergency communications, and NDRF first-response networks.',
+      moduleIds: ['do_1143166853070028801812'],
       badge: 'Strategic Growth',
+      kpReward: 200,
+      phaseBoxClass: 'bg-[#FFE9CD] border-[#FFD2A1]',
+      pillClass: 'bg-[#EF951E] text-white',
     },
     {
       phaseNumber: 3,
-      title: 'Citizen-Centricity & Leadership Mastery',
+      title: 'Participatory Governance & Jan Andolan',
       timeframe: 'Weeks 8 - 12',
-      objective: 'Reinforce public grievance resolution and executive administrative governance under DARPG standards.',
-      moduleIds: ['mod-3'],
-      badge: 'Capstone Level',
+      objective: 'Lead nationwide participatory sanitation, Safai Mitra Suraksha Shivirs, and Cleanliness Target Unit transformations.',
+      moduleIds: ['do_1141533857591132161321'],
+      badge: 'Mastery',
+      kpReward: 100,
+      phaseBoxClass: 'bg-[#FEF3C7] border-[#FDE68A]',
+      pillClass: 'bg-[#DBA501] text-white',
     },
   ];
 
   return (
-    <section id="roadmap-screen" class="flex-1 p-6 md:p-8 space-y-6 overflow-y-auto">
-      {/* Header with AI Pacing Controls */}
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <section id="roadmap-screen" class="space-y-6 animate-in fade-in duration-200 pb-12">
+      {/* Toast Notification */}
+      {recalibrationToast && (
+        <div class="fixed top-20 right-6 z-50 bg-[#1B4CA1] text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 border border-[#C7D9FB] animate-in slide-in-from-top duration-300 text-xs">
+          <Sparkles class="w-4 h-4 text-[#FEF3C7]" />
+          <span>Ira AI recalibrated pathway based on latest DoPT competency benchmarks!</span>
+        </div>
+      )}
+
+      {/* Header Banner */}
+      <div class="bg-white p-6 rounded-2xl border border-[#E5E7EB] shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <Compass class="w-5 h-5 text-amber-500" />
-            <h2 class="text-2xl font-serif text-white font-semibold tracking-wide">
-              Personalized Learning Roadmap
-            </h2>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-[#FFE9CD] text-[#C37024] border border-[#FFD2A1] px-2 py-0.5 rounded">
+              Role Progression
+            </span>
+            <span class="text-xs text-[#1B4CA1] font-bold">Cadre Level 14 Career Pathway</span>
           </div>
-          <p class="text-xs text-gray-400">
-            Tailored progression pathway auto-synthesized from your role-specific competency deficits.
+          <h2 class="text-2xl font-extrabold text-[#1B4CA1] tracking-tight">
+            Personalized Learning Pathway
+          </h2>
+          <p class="text-xs text-[#4B5563] mt-1 max-w-2xl leading-relaxed">
+            Role-calibrated trajectory aligning your learning directly with the Capacity Building Commission (CBC) guidelines.
           </p>
         </div>
 
-        {/* Pacing Toggle & Recalibrate */}
+        {/* Pacing & Recalibration controls */}
         <div class="flex flex-wrap items-center gap-3">
-          <div class="flex items-center bg-[#16181D] border border-gray-800 rounded-xl p-1 text-xs">
-            <button
-              onClick={() => setPacing('express')}
-              class={`px-3 py-1.5 rounded-lg font-medium transition-all ${
-                pacing === 'express' ? 'bg-amber-500 text-black font-semibold' : 'text-gray-400 hover:text-gray-200'
-              }`}
-            >
-              Express (2 hrs/wk)
-            </button>
-            <button
-              onClick={() => setPacing('balanced')}
-              class={`px-3 py-1.5 rounded-lg font-medium transition-all ${
-                pacing === 'balanced' ? 'bg-amber-500 text-black font-semibold' : 'text-gray-400 hover:text-gray-200'
-              }`}
-            >
-              Balanced (4 hrs/wk)
-            </button>
-            <button
-              onClick={() => setPacing('intensive')}
-              class={`px-3 py-1.5 rounded-lg font-medium transition-all ${
-                pacing === 'intensive' ? 'bg-amber-500 text-black font-semibold' : 'text-gray-400 hover:text-gray-200'
-              }`}
-            >
-              Intensive (6 hrs/wk)
-            </button>
+          <div class="flex items-center bg-[#EDF1F7] p-1 rounded-xl border border-[#C7D9FB] text-xs">
+            {(['express', 'balanced', 'intensive'] as const).map((mode) => (
+              <button
+                key={mode}
+                onClick={() => setPacing(mode)}
+                class={`px-3 py-1.5 rounded-lg capitalize font-semibold transition-all cursor-pointer ${
+                  pacing === mode
+                    ? 'bg-[#1B4CA1] text-white shadow-xs font-bold'
+                    : 'text-[#374151] hover:text-[#1B4CA1]'
+                }`}
+              >
+                {mode}
+              </button>
+            ))}
           </div>
 
           <button
-            id="btn-recalibrate-roadmap"
             onClick={handleRecalibrate}
             disabled={isRecalibrating}
-            class="px-4 py-2 bg-[#16181D] hover:bg-gray-800 text-amber-400 border border-amber-500/30 text-xs font-semibold rounded-xl transition-all flex items-center gap-2 cursor-pointer shadow-sm"
+            class="px-3.5 py-2 bg-[#1B4CA1] hover:bg-[#002B6C] text-white rounded-xl text-xs font-bold shadow-xs flex items-center gap-1.5 transition-colors cursor-pointer"
           >
-            <RefreshCw class={`w-3.5 h-3.5 ${isRecalibrating ? 'animate-spin text-amber-500' : ''}`} />
-            <span>{isRecalibrating ? 'Recalibrating...' : 'AI Recalibrate'}</span>
+            <RefreshCw class={`w-3.5 h-3.5 ${isRecalibrating ? 'animate-spin' : ''}`} />
+            <span>{isRecalibrating ? 'Recalibrating...' : 'Recalibrate AI'}</span>
           </button>
         </div>
       </div>
 
-      {recalibrationToast && (
-        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 flex items-center justify-between transition-all">
-          <div class="flex items-center gap-2">
-            <Sparkles class="w-4 h-4 text-amber-500" />
-            <span>Roadmap successfully optimized: modules prioritized by latest GFR 2024 compliance updates.</span>
-          </div>
-          <span class="text-[10px] text-gray-400">Pacing: {pacing.toUpperCase()}</span>
+      {/* Pathway Summary Metrics - Matching Light Blue, Skin, and Yellow boxes */}
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+        {/* Box 1: Light Blue Box */}
+        <div class="bg-[#EDF1F7] p-4 rounded-xl border border-[#C7D9FB] shadow-2xs">
+          <p class="text-[11px] font-bold text-[#1B4CA1] uppercase">Estimated Hours</p>
+          <p class="text-2xl font-extrabold text-[#1B4CA1] mt-1">14.5 hrs</p>
+          <p class="text-[10px] text-[#4B5563] mt-1">~2.5 hrs / week at {pacing} pace</p>
         </div>
-      )}
 
-      {/* Roadmap Overview Summary Stats */}
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div class="bg-[#16181D] border border-gray-800 rounded-xl p-4">
-          <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Total Estimated Hours</p>
-          <h3 class="text-2xl font-serif text-white mt-1">18.5 hrs</h3>
-          <p class="text-[10px] text-amber-400 mt-0.5">Estimated completion: 6 weeks</p>
+        {/* Box 2: Skin Box */}
+        <div class="bg-[#FFE9CD] p-4 rounded-xl border border-[#FFD2A1] shadow-2xs">
+          <p class="text-[11px] font-bold text-[#C37024] uppercase">Modules in Path</p>
+          <p class="text-2xl font-extrabold text-[#1B2133] mt-1">5 Modules</p>
+          <p class="text-[10px] text-emerald-700 font-bold mt-1">1 Completed • 1 In Progress</p>
         </div>
-        <div class="bg-[#16181D] border border-gray-800 rounded-xl p-4">
-          <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Target Competencies</p>
-          <h3 class="text-2xl font-serif text-white mt-1">5 Areas</h3>
-          <p class="text-[10px] text-emerald-400 mt-0.5">3 in active remediation</p>
+
+        {/* Box 3: Yellow Box */}
+        <div class="bg-[#FEF3C7] p-4 rounded-xl border border-[#FDE68A] shadow-2xs">
+          <p class="text-[11px] font-bold text-[#92400E] uppercase">Core Pillars</p>
+          <p class="text-2xl font-extrabold text-[#B45309] mt-1">4 Domains</p>
+          <p class="text-[10px] text-[#92400E] mt-1">Full FRAC 2.0 alignment</p>
         </div>
-        <div class="bg-[#16181D] border border-gray-800 rounded-xl p-4">
-          <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Overall Pathway Progress</p>
-          <h3 class="text-2xl font-serif text-white mt-1">65%</h3>
-          <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden mt-1.5">
-            <div class="bg-amber-500 h-full w-[65%]"></div>
-          </div>
-        </div>
-        <div class="bg-[#16181D] border border-gray-800 rounded-xl p-4">
-          <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Next Milestone</p>
-          <h3 class="text-sm font-semibold text-white mt-1 line-clamp-1">e-Office 7.0 Certification</h3>
-          <p class="text-[10px] text-gray-400 mt-0.5">Due in 4 days</p>
+
+        {/* Box 4: Soft Light Blue Box */}
+        <div class="bg-[#E6EEFF] p-4 rounded-xl border border-[#C7D9FB] shadow-2xs">
+          <p class="text-[11px] font-bold text-[#1B4CA1] uppercase">Target Readiness</p>
+          <p class="text-2xl font-extrabold text-[#1B4CA1] mt-1">94.2%</p>
+          <p class="text-[10px] text-[#0A66C2] font-bold mt-1">+10% gain over baseline</p>
         </div>
       </div>
 
-      {/* Timeline Milestone Phases */}
+      {/* Timeline Phases */}
       <div class="space-y-6">
         {phases.map((phase) => {
-          const phaseModules = modules.filter(m => phase.moduleIds.includes(m.id));
+          const phaseModules = modules.filter((m) => phase.moduleIds.includes(m.id));
 
           return (
             <div
               key={phase.phaseNumber}
-              class="bg-[#16181D] border border-gray-800 rounded-2xl p-6 shadow-xl relative overflow-hidden"
+              class={`border rounded-2xl p-6 shadow-2xs relative ${phase.phaseBoxClass}`}
             >
-              {/* Milestone Phase Header */}
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-800 pb-4 mb-5">
+              {/* Phase Header */}
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-current/10">
                 <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-serif font-bold text-sm">
+                  <span class={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs ${phase.pillClass}`}>
                     {phase.phaseNumber}
-                  </div>
+                  </span>
                   <div>
-                    <div class="flex items-center gap-2">
-                      <h3 class="text-base font-serif text-white font-semibold">{phase.title}</h3>
-                      <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                        {phase.badge}
-                      </span>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-0.5">{phase.objective}</p>
+                    <h3 class="text-base font-bold text-[#1B2133]">{phase.title}</h3>
+                    <p class="text-xs text-[#4B5563] mt-0.5">{phase.objective}</p>
                   </div>
                 </div>
-                <div class="flex items-center gap-2 text-xs text-gray-400 font-mono">
-                  <Calendar class="w-3.5 h-3.5 text-amber-500" />
-                  <span>{phase.timeframe}</span>
+
+                <div class="flex items-center gap-3 self-start sm:self-auto">
+                  <span class="text-[11px] font-semibold text-[#1B2133] bg-white/80 border border-current/20 px-2.5 py-1 rounded-md flex items-center gap-1">
+                    <Calendar class="w-3 h-3 text-slate-500" />
+                    {phase.timeframe}
+                  </span>
+                  <span class="text-[11px] font-bold text-[#92400E] bg-white border border-[#FDE68A] px-2 py-1 rounded-md flex items-center gap-1">
+                    <ShieldCheck class="w-3 h-3 text-[#DBA501]" /> DoPT Certified
+                  </span>
                 </div>
               </div>
 
               {/* Module Cards in Phase */}
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {phaseModules.map((mod) => (
-                  <div
-                    key={mod.id}
-                    id={`roadmap-module-${mod.id}`}
-                    class="bg-[#0F1115] border border-gray-800 hover:border-gray-700 rounded-xl p-5 transition-all flex flex-col justify-between group"
-                  >
-                    <div>
-                      <div class="flex items-center justify-between mb-2">
-                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-black/50 text-amber-400 border border-gray-800">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                {phaseModules.map((mod) => {
+                  const isCompleted = mod.status === 'completed';
+                  const isInProgress = mod.status === 'in-progress';
+
+                  return (
+                    <div
+                      key={mod.id}
+                      onClick={() => onOpenModule(mod)}
+                      class="p-4 rounded-xl border border-[#E5E7EB] bg-white hover:border-[#C7D9FB] hover:shadow-xs transition-all cursor-pointer group"
+                    >
+                      <div class="flex items-start justify-between gap-2 mb-2">
+                        <span class="text-[10px] font-mono font-bold text-[#1B4CA1] bg-[#EDF1F7] border border-[#C7D9FB] px-1.5 py-0.2 rounded">
                           {mod.competencyCode}
                         </span>
                         <span
-                          class={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
-                            mod.status === 'completed'
-                              ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                              : mod.status === 'in-progress'
-                              ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                              : 'bg-gray-800 text-gray-400'
+                          class={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase ${
+                            isCompleted
+                              ? 'bg-emerald-100 text-emerald-800'
+                              : isInProgress
+                              ? 'bg-[#EDF1F7] text-[#1B4CA1] border border-[#C7D9FB]'
+                              : 'bg-slate-100 text-slate-700'
                           }`}
                         >
-                          {mod.status === 'completed' ? 'Completed' : mod.status === 'in-progress' ? 'In Progress' : 'Not Started'}
+                          {mod.status.replace('-', ' ')}
                         </span>
                       </div>
-                      <h4
-                        onClick={() => onOpenModule(mod)}
-                        class="text-sm font-semibold text-white group-hover:text-amber-400 cursor-pointer transition-colors"
-                      >
+
+                      <h4 class="text-xs font-bold text-[#1B2133] group-hover:text-[#EF951E] transition-colors line-clamp-1">
                         {mod.title}
                       </h4>
-                      <p class="text-xs text-gray-400 mt-1 line-clamp-2">{mod.description}</p>
-                    </div>
+                      <p class="text-[11px] text-[#4B5563] mt-1 line-clamp-2">{mod.description}</p>
 
-                    <div class="mt-4 pt-3 border-t border-gray-800/80">
-                      <div class="flex items-center justify-between text-xs text-gray-400 mb-2">
-                        <span class="flex items-center gap-1.5 text-[11px]">
-                          <Clock class="w-3 h-3 text-gray-500" /> {mod.durationMinutes} mins
-                        </span>
-                        <span class="font-mono text-amber-400 text-[11px] font-semibold">{mod.progressPercent}%</span>
-                      </div>
-                      <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden mb-3">
+                      <div class="w-full bg-[#EDF1F7] h-2 rounded-full overflow-hidden mt-3">
                         <div
-                          class="bg-amber-500 h-full rounded-full transition-all duration-500"
+                          class={`h-full rounded-full transition-all duration-500 ${
+                            isCompleted ? 'bg-emerald-600' : 'bg-[#EF951E]'
+                          }`}
                           style={{ width: `${mod.progressPercent}%` }}
                         ></div>
                       </div>
 
-                      <button
-                        onClick={() => onOpenModule(mod)}
-                        class="w-full py-2 bg-[#16181D] hover:bg-amber-500 hover:text-black text-amber-400 border border-amber-500/30 text-xs font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-                      >
-                        {mod.status === 'completed' ? (
-                          <>
-                            <CheckCircle2 class="w-3.5 h-3.5 text-emerald-400 group-hover:text-black" />
-                            <span>Review Completed Course</span>
-                          </>
-                        ) : (
-                          <>
-                            <Play class="w-3.5 h-3.5 fill-current" />
-                            <span>{mod.status === 'in-progress' ? 'Continue Learning' : 'Start Module'}</span>
-                          </>
-                        )}
-                      </button>
+                      <div class="flex items-center justify-between text-[11px] text-[#4B5563] mt-2.5">
+                        <span class="flex items-center gap-1">
+                          <Clock class="w-3 h-3 text-slate-400" /> {mod.durationMinutes} mins
+                        </span>
+                        <span class="font-bold text-[#1B4CA1]">{mod.progressPercent}% complete</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           );
