@@ -8,7 +8,7 @@ interface MinistryLogoProps {
 export const MinistryLogo: React.FC<MinistryLogoProps> = ({ type, className = 'w-5 h-5' }) => {
   if (type === 'istm') {
     return (
-      <svg viewBox="0 0 100 100" class={`${className} shrink-0 text-[#1B4CA1]`} aria-label="ISTM Logo">
+      <svg viewBox="0 0 100 100" className={`${className} shrink-0 text-[#1B4CA1]`} aria-label="ISTM Logo">
         <circle cx="50" cy="50" r="46" fill="#1B4CA1" />
         <circle cx="50" cy="50" r="41" fill="none" stroke="#FFA730" strokeWidth="2.5" />
         {/* Open book */}
@@ -31,7 +31,7 @@ export const MinistryLogo: React.FC<MinistryLogoProps> = ({ type, className = 'w
 
   if (type === 'mohfw') {
     return (
-      <svg viewBox="0 0 100 100" class={`${className} shrink-0 text-[#1B2133]`} aria-label="MoHFW Emblem">
+      <svg viewBox="0 0 100 100" className={`${className} shrink-0 text-[#1B2133]`} aria-label="MoHFW Emblem">
         <circle cx="50" cy="50" r="46" fill="#F8FAFC" stroke="#94A3B8" strokeWidth="1.5" />
         {/* Ashoka Lion Stambh */}
         <path
@@ -46,7 +46,7 @@ export const MinistryLogo: React.FC<MinistryLogoProps> = ({ type, className = 'w
 
   if (type === 'ndrf') {
     return (
-      <svg viewBox="0 0 100 100" class={`${className} shrink-0`} aria-label="NDRF Logo">
+      <svg viewBox="0 0 100 100" className={`${className} shrink-0`} aria-label="NDRF Logo">
         <circle cx="50" cy="50" r="46" fill="#FEFAF4" stroke="#DBA501" strokeWidth="2" />
         <circle cx="50" cy="50" r="38" fill="#1B4CA1" />
         {/* NDRF Lifebuoy & Rescue Wings */}
@@ -65,7 +65,7 @@ export const MinistryLogo: React.FC<MinistryLogoProps> = ({ type, className = 'w
 
   if (type === 'mohua') {
     return (
-      <svg viewBox="0 0 100 100" class={`${className} shrink-0`} aria-label="MoHUA Swachh Bharat Logo">
+      <svg viewBox="0 0 100 100" className={`${className} shrink-0`} aria-label="MoHUA Swachh Bharat Logo">
         <circle cx="50" cy="50" r="46" fill="#F0FDF4" stroke="#16A34A" strokeWidth="1.5" />
         {/* Gandhi spectacles (Chashma) - Swachh Bharat icon */}
         <circle cx="36" cy="48" r="14" fill="none" stroke="#15803D" strokeWidth="4" />
@@ -80,7 +80,7 @@ export const MinistryLogo: React.FC<MinistryLogoProps> = ({ type, className = 'w
   }
 
   return (
-    <div class={`${className} rounded-full bg-slate-200 flex items-center justify-center text-[9px] font-bold text-slate-700`}>
+    <div className={`${className} rounded-full bg-slate-200 flex items-center justify-center text-[9px] font-bold text-slate-700`}>
       GOI
     </div>
   );

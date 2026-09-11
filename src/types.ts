@@ -141,6 +141,9 @@ export interface QuizQuestion {
   correctIndex: number;
   officialRationale: string;
   regulationCitation: string;
+  cognitiveLevel?: 'Recall' | 'Application';
+  competencyTag?: string;
+  difficulty?: 'Foundation' | 'Intermediate' | 'Advanced';
 }
 
 export interface UserProfile {

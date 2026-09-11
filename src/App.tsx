@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { ScreenId, LearningModule } from './types';
+import { ScreenId, LearningModule, QuizQuestion } from './types';
 import { currentUserProfile, initialCompetencies, learningModules, quizQuestions } from './data/mockData';
 import { GovernmentMasthead } from './components/GovernmentMasthead';
 import { Header } from './components/Header';
@@ -34,6 +34,25 @@ export default function App() {
   const [language, setLanguage] = useState<'English' | 'हिन्दी'>('English');
   const [fontSizeDelta, setFontSizeDelta] = useState<number>(0);
   const [highContrast, setHighContrast] = useState<boolean>(false);
+
+  // Active Quiz Studio State (syncs when generated from video module end-screen or course modal)
+  const [activeQuizQuestions, setActiveQuizQuestions] = useState<QuizQuestion[]>(quizQuestions);
+  const [activeQuizTitle, setActiveQuizTitle] = useState<string>(
+    'DoPT Governance Assessment (GFR 2024, CSMOP & Ethics)'
+  );
+  const [activeQuizMode, setActiveQuizMode] = useState<'practice' | 'test'>('practice');
+
+  const handleLaunchQuizStudio = (
+    questions: QuizQuestion[],
+    title: string,
+    mode: 'practice' | 'test' = 'practice'
+  ) => {
+    setActiveQuizQuestions(questions);
+    setActiveQuizTitle(title);
+    setActiveQuizMode(mode);
+    setSelectedModule(null);
+    setCurrentScreen('quiz-studio');
+  };
 
   // Sync courses with live Express backend (/api/courses)
   useEffect(() => {
@@ -89,15 +108,40 @@ export default function App() {
       })
     );
 
-    // If active path module or high impact module updated, increment readiness
+    setSelectedModule((prev) =>
+      prev && prev.id === moduleId
+        ? {
+            ...prev,
+            progressPercent: newProgress,
+            status: newProgress === 100 ? 'completed' : newProgress > 0 ? 'in-progress' : 'not-started',
+          }
+        : prev
+    );
+
+    // Only increment user points/readiness if advancing, not on reset
+    if (newProgress > 0) {
+      setUser((prev) => {
+        const delta = Math.min(99.4, +(prev.competencyReadiness + 0.1).toFixed(1));
+        const newPoints = newProgress === 100 ? prev.karmaPoints + 50 : prev.karmaPoints;
+        return {
+          ...prev,
+          competencyReadiness: delta,
+          karmaPoints: newPoints,
+          activePathProgress: Math.min(100, prev.activePathProgress + 1),
+        };
+      });
+    }
+  };
+
+  const handleQuizComplete = (score: number, total: number, mode: 'practice' | 'test') => {
     setUser((prev) => {
-      const delta = Math.min(99.4, +(prev.competencyReadiness + 0.3).toFixed(1));
-      const newPoints = newProgress === 100 ? prev.karmaPoints + 50 : prev.karmaPoints;
+      const pointBonus = mode === 'test' ? Math.round((score / total) * 100) + 25 : 30;
+      const readinessBoost = +(prev.competencyReadiness + (mode === 'test' ? 0.3 : 0.1)).toFixed(1);
       return {
         ...prev,
-        competencyReadiness: delta,
-        karmaPoints: newPoints,
-        activePathProgress: Math.min(100, prev.activePathProgress + 2),
+        karmaPoints: prev.karmaPoints + pointBonus,
+        competencyReadiness: Math.min(99.8, readinessBoost),
+        quizProficiency: `${score}/${total} (${Math.round((score / total) * 100)}%)`,
       };
     });
   };
@@ -123,7 +167,7 @@ export default function App() {
     <div
       id="igot-portal-root"
       style={fontStyle}
-      class={`min-h-screen flex flex-col font-sans antialiased transition-colors ${
+      className={`min-h-screen flex flex-col font-sans antialiased transition-colors ${
         highContrast
           ? 'bg-slate-900 text-slate-100 selection:bg-[#EF951E] selection:text-black'
           : 'bg-[#FEFAF4] text-[#1B2133] selection:bg-[#EF951E] selection:text-white'
@@ -148,7 +192,7 @@ export default function App() {
       <TickerBar onActionClick={() => setCurrentScreen('gap-analysis')} />
 
       {/* 4. Main Portal Content Canvas */}
-      <main id="main-content" tabIndex={-1} class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 outline-none">
+      <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 outline-none">
         {currentScreen === 'dashboard' && (
           <DashboardScreen
             user={user}
@@ -181,9 +225,12 @@ export default function App() {
 
         {currentScreen === 'quiz-studio' && (
           <QuizStudioScreen
-            questions={quizQuestions}
+            questions={activeQuizQuestions}
+            initialTitle={activeQuizTitle}
+            initialMode={activeQuizMode}
             onNavigate={setCurrentScreen}
             onOpenCopilot={() => setIsCopilotOpen(true)}
+            onQuizComplete={handleQuizComplete}
           />
         )}
 
@@ -208,12 +255,12 @@ export default function App() {
       <button
         id="floating-ask-ira-btn"
         onClick={() => setIsCopilotOpen(true)}
-        class="fixed bottom-6 right-6 z-40 bg-[#EF951E] hover:bg-[#F08811] text-white font-bold text-xs px-4 py-3 rounded-full shadow-lg hover:shadow-xl flex items-center gap-2 transition-all cursor-pointer group transform hover:-translate-y-0.5"
+        className="fixed bottom-6 right-6 z-40 bg-[#EF951E] hover:bg-[#F08811] text-white font-bold text-xs px-4 py-3 rounded-full shadow-lg hover:shadow-xl flex items-center gap-2 transition-all cursor-pointer group transform hover:-translate-y-0.5"
         aria-label="Ask Ira AI Copilot"
       >
-        <Sparkles class="w-4 h-4 text-yellow-200 group-hover:rotate-12 transition-transform" />
-        <span class="tracking-wide">Ask Ira AI</span>
-        <span class="w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-white"></span>
+        <Sparkles className="w-4 h-4 text-yellow-200 group-hover:rotate-12 transition-transform" />
+        <span className="tracking-wide">Ask Ira AI</span>
+        <span className="w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-white"></span>
       </button>
 
       {/* 6. Comprehensive Government Portal Settings Modal */}
@@ -241,6 +288,8 @@ export default function App() {
           module={selectedModule}
           onClose={() => setSelectedModule(null)}
           onUpdateProgress={handleUpdateModuleProgress}
+          onNavigateToQuizStudio={handleLaunchQuizStudio}
+          onQuizComplete={handleQuizComplete}
         />
       )}
 

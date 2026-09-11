@@ -11,18 +11,18 @@ export const GovernmentMasthead: React.FC<GovernmentMastheadProps> = ({
   language = 'English',
 }) => {
   return (
-    <div id="goi-masthead" class="w-full bg-[#0B1E36] text-slate-200 text-xs border-b border-slate-700/60 select-none">
+    <div id="goi-masthead" className="w-full bg-[#0B1E36] text-slate-200 text-xs border-b border-slate-700/60 select-none">
       {/* Indian National Tricolor Top Stripe (Saffron, White, Green) */}
-      <div class="india-tricolor-bar"></div>
+      <div className="india-tricolor-bar"></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex flex-wrap items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex flex-wrap items-center justify-between gap-3">
         {/* Left: Official Ashoka Stambh Emblem & Government Credentials */}
-        <div class="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           {/* Ashoka Stambh Lion Capital Icon */}
-          <div class="flex items-center gap-2.5">
+          <div className="flex items-center gap-2.5">
             <svg
               viewBox="0 0 100 100"
-              class="w-6 h-6 text-amber-400 drop-shadow-sm shrink-0 fill-current"
+              className="w-6 h-6 text-amber-400 drop-shadow-sm shrink-0 fill-current"
               aria-label="State Emblem of India"
             >
               <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.3" />
@@ -36,13 +36,13 @@ export const GovernmentMasthead: React.FC<GovernmentMastheadProps> = ({
               <circle cx="50" cy="23" r="2.5" fill="#0B1E36" />
               <path d="M40 84 L60 84" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
-            <div class="leading-tight">
-              <div class="flex items-center gap-2">
-                <span class="font-bold tracking-wide text-white font-['Noto_Sans_Devanagari',sans-serif]">भारत सरकार</span>
-                <span class="text-slate-400">|</span>
-                <span class="font-semibold tracking-wide text-slate-200">Government of India</span>
+            <div className="leading-tight">
+              <div className="flex items-center gap-2">
+                <span className="font-bold tracking-wide text-white font-['Noto_Sans_Devanagari',sans-serif]">भारत सरकार</span>
+                <span className="text-slate-400">|</span>
+                <span className="font-semibold tracking-wide text-slate-200">Government of India</span>
               </div>
-              <p class="text-[10px] text-slate-300 truncate max-w-[280px] sm:max-w-none">
+              <p className="text-[10px] text-slate-300 truncate max-w-[280px] sm:max-w-none">
                 {language === 'हिन्दी'
                   ? 'कार्मिक, लोक शिकायत तथा पेंशन मंत्रालय • कार्मिक एवं प्रशिक्षण विभाग (DoPT)'
                   : 'Ministry of Personnel, Public Grievances & Pensions • Dept of Personnel & Training (DoPT)'}
@@ -52,27 +52,27 @@ export const GovernmentMasthead: React.FC<GovernmentMastheadProps> = ({
         </div>
 
         {/* Right: Official Mission Tag, Gov.in Verification & Settings Button */}
-        <div class="flex items-center gap-3 text-[11px]">
+        <div className="flex items-center gap-3 text-[11px]">
           {/* Mission Tag */}
-          <span class="hidden md:inline-block text-[10px] text-slate-300 font-medium tracking-wide">
+          <span className="hidden md:inline-block text-[10px] text-slate-300 font-medium tracking-wide">
             राष्ट्रीय सिविल सेवा क्षमता विकास कार्यक्रम (NPCSCB)
           </span>
 
-          <div class="h-3 w-px bg-slate-700 hidden md:block"></div>
+          <div className="h-3 w-px bg-slate-700 hidden md:block"></div>
 
           {/* Secure .gov.in Badge */}
-          <div class="flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/70 border border-emerald-800/80 px-2 py-0.5 rounded font-mono font-semibold">
-            <ShieldCheck class="w-3 h-3 text-emerald-400" />
+          <div className="flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/70 border border-emerald-800/80 px-2 py-0.5 rounded font-mono font-semibold">
+            <ShieldCheck className="w-3 h-3 text-emerald-400" />
             <span>gov.in</span>
           </div>
 
           {/* Clean Portal Settings & Accessibility Button */}
           <button
             onClick={onOpenSettings}
-            class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 transition-colors cursor-pointer text-[11px] font-semibold"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 transition-colors cursor-pointer text-[11px] font-semibold"
             title="Portal Settings, Accessibility & Notifications"
           >
-            <Settings class="w-3.5 h-3.5 text-amber-400" />
+            <Settings className="w-3.5 h-3.5 text-amber-400" />
             <span>{language === 'हिन्दी' ? 'सेटिंग्स' : 'Settings'}</span>
           </button>
         </div>

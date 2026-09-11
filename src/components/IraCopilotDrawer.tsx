@@ -82,51 +82,51 @@ export const IraCopilotDrawer: React.FC<IraCopilotDrawerProps> = ({
   };
 
   return (
-    <div class="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-xs transition-opacity animate-in fade-in duration-200">
-      <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col border-l border-[#E5E7EB] text-[#1B2133]">
+    <div className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-xs transition-opacity animate-in fade-in duration-200">
+      <div className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col border-l border-[#E5E7EB] text-[#1B2133]">
         {/* Drawer Header: Deep iGOT Blue (#1B4CA1) */}
-        <div class="p-4 bg-[#1B4CA1] text-white flex items-center justify-between border-b border-[#002B6C]">
-          <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-lg bg-[#EF951E] flex items-center justify-center text-white shadow-sm">
-              <Sparkles class="w-4 h-4 text-white" />
+        <div className="p-4 bg-[#1B4CA1] text-white flex items-center justify-between border-b border-[#002B6C]">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-[#EF951E] flex items-center justify-center text-white shadow-sm">
+              <Sparkles className="w-4 h-4 text-white" />
             </div>
             <div>
-              <div class="flex items-center gap-2">
-                <h3 class="font-bold text-base tracking-tight text-white">Ira AI Copilot</h3>
-                <span class="text-[10px] bg-white/20 text-[#FEF3C7] border border-white/30 px-1.5 py-0.2 rounded font-mono font-bold">
+              <div className="flex items-center gap-2">
+                <h3 className="font-bold text-base tracking-tight text-white">Ira AI Copilot</h3>
+                <span className="text-[10px] bg-white/20 text-[#FEF3C7] border border-white/30 px-1.5 py-0.2 rounded font-mono font-bold">
                   Active
                 </span>
               </div>
-              <p class="text-[10px] text-blue-100">Civil Services Capacity Intelligence • iGOT Bharat</p>
+              <p className="text-[10px] text-blue-100">Civil Services Capacity Intelligence • iGOT Bharat</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            class="p-1.5 rounded-lg text-blue-200 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg text-blue-200 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
             aria-label="Close Copilot"
           >
-            <X class="w-5 h-5" />
+            <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Status bar: Yellow Box (#FEF3C7) */}
-        <div class="bg-[#FEF3C7] px-4 py-2 border-b border-[#FDE68A] flex items-center justify-between text-[11px] text-[#92400E]">
-          <span class="flex items-center gap-1.5 font-bold">
-            <ShieldCheck class="w-3.5 h-3.5 text-[#DBA501]" />
+        <div className="bg-[#FEF3C7] px-4 py-2 border-b border-[#FDE68A] flex items-center justify-between text-[11px] text-[#92400E]">
+          <span className="flex items-center gap-1.5 font-bold">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#DBA501]" />
             Grounded in GFR 2024 & DoPT Regulations
           </span>
-          <span class="text-[10px] font-mono text-[#B45309] font-bold">{user.cadreLevel}</span>
+          <span className="text-[10px] font-mono text-[#B45309] font-bold">{user.cadreLevel}</span>
         </div>
 
         {/* Message Stream */}
-        <div class="flex-1 p-4 overflow-y-auto space-y-4 bg-[#FEFAF4]">
+        <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-[#FEFAF4]">
           {messages.map((msg, i) => (
             <div
               key={i}
-              class={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}
+              className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}
             >
               <div
-                class={`max-w-[85%] rounded-2xl p-3.5 text-xs leading-relaxed shadow-xs ${
+                className={`max-w-[85%] rounded-2xl p-3.5 text-xs leading-relaxed shadow-xs ${
                   msg.sender === 'user'
                     ? 'bg-[#1B4CA1] text-white rounded-br-none'
                     : 'bg-white border border-[#FFD2A1] text-[#1B2133] rounded-bl-none shadow-sm'
@@ -135,8 +135,8 @@ export const IraCopilotDrawer: React.FC<IraCopilotDrawerProps> = ({
                 {msg.text}
               </div>
               {msg.citation && (
-                <div class="mt-1 flex items-center gap-1 text-[10px] text-[#C37024] font-medium px-1">
-                  <BookOpen class="w-3 h-3 text-[#EF951E]" />
+                <div className="mt-1 flex items-center gap-1 text-[10px] text-[#C37024] font-medium px-1">
+                  <BookOpen className="w-3 h-3 text-[#EF951E]" />
                   <span>{msg.citation}</span>
                 </div>
               )}
@@ -144,24 +144,24 @@ export const IraCopilotDrawer: React.FC<IraCopilotDrawerProps> = ({
           ))}
 
           {isTyping && (
-            <div class="flex items-center gap-2 p-3 bg-white rounded-xl border border-[#C7D9FB] text-slate-500 text-xs w-fit">
-              <span class="inline-block w-2 h-2 rounded-full bg-[#EF951E] animate-bounce"></span>
-              <span class="inline-block w-2 h-2 rounded-full bg-[#1B4CA1] animate-bounce [animation-delay:0.2s]"></span>
-              <span class="inline-block w-2 h-2 rounded-full bg-[#EF951E] animate-bounce [animation-delay:0.4s]"></span>
-              <span class="text-[11px] text-[#1B4CA1] ml-1 font-bold">Consulting DoPT regulatory corpus...</span>
+            <div className="flex items-center gap-2 p-3 bg-white rounded-xl border border-[#C7D9FB] text-slate-500 text-xs w-fit">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#EF951E] animate-bounce"></span>
+              <span className="inline-block w-2 h-2 rounded-full bg-[#1B4CA1] animate-bounce [animation-delay:0.2s]"></span>
+              <span className="inline-block w-2 h-2 rounded-full bg-[#EF951E] animate-bounce [animation-delay:0.4s]"></span>
+              <span className="text-[11px] text-[#1B4CA1] ml-1 font-bold">Consulting DoPT regulatory corpus...</span>
             </div>
           )}
         </div>
 
         {/* Quick Inquiries: Light Blue Boxes (#EDF1F7) */}
-        <div class="p-3 bg-white border-t border-[#E5E7EB]">
-          <p class="text-[10px] uppercase font-bold text-[#4B5563] tracking-wider mb-2">Suggested Inquiries</p>
-          <div class="flex flex-wrap gap-1.5">
+        <div className="p-3 bg-white border-t border-[#E5E7EB]">
+          <p className="text-[10px] uppercase font-bold text-[#4B5563] tracking-wider mb-2">Suggested Inquiries</p>
+          <div className="flex flex-wrap gap-1.5">
             {quickPrompts.slice(0, 3).map((prompt, idx) => (
               <button
                 key={idx}
                 onClick={() => handleSend(prompt)}
-                class="text-[11px] bg-[#EDF1F7] hover:bg-[#E6EEFF] hover:text-[#1B4CA1] border border-[#C7D9FB] px-2.5 py-1 rounded-full text-[#1B4CA1] transition-all text-left truncate max-w-full font-medium cursor-pointer"
+                className="text-[11px] bg-[#EDF1F7] hover:bg-[#E6EEFF] hover:text-[#1B4CA1] border border-[#C7D9FB] px-2.5 py-1 rounded-full text-[#1B4CA1] transition-all text-left truncate max-w-full font-medium cursor-pointer"
               >
                 {prompt}
               </button>
@@ -170,21 +170,21 @@ export const IraCopilotDrawer: React.FC<IraCopilotDrawerProps> = ({
         </div>
 
         {/* Input Bar */}
-        <div class="p-3 bg-white border-t border-[#E5E7EB] flex items-center gap-2">
+        <div className="p-3 bg-white border-t border-[#E5E7EB] flex items-center gap-2">
           <input
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend(inputValue)}
             placeholder="Ask Ira about rules, modules, or competencies..."
-            class="flex-1 text-xs bg-[#EDF1F7] border border-[#C7D9FB] rounded-lg px-3 py-2.5 text-[#1B2133] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1B4CA1] focus:bg-white transition-all"
+            className="flex-1 text-xs bg-[#EDF1F7] border border-[#C7D9FB] rounded-lg px-3 py-2.5 text-[#1B2133] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1B4CA1] focus:bg-white transition-all"
           />
           <button
             onClick={() => handleSend(inputValue)}
-            class="p-2.5 bg-[#EF951E] hover:bg-[#F08811] text-white rounded-lg transition-colors cursor-pointer shadow-sm"
+            className="p-2.5 bg-[#EF951E] hover:bg-[#F08811] text-white rounded-lg transition-colors cursor-pointer shadow-sm"
             aria-label="Send message"
           >
-            <Send class="w-4 h-4" />
+            <Send className="w-4 h-4" />
           </button>
         </div>
       </div>

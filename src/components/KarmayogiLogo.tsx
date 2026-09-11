@@ -19,12 +19,12 @@ export const KarmayogiLogo: React.FC<KarmayogiLogoProps> = ({
   }[size];
 
   return (
-    <div class={`inline-flex items-center gap-2.5 sm:gap-3.5 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-2.5 sm:gap-3.5 select-none ${className}`}>
       {/* Karmayogi Bharat Official Stylized Emblem: Pen-Nib, Solar Aura, Geometric Lotus Wings & Mouse */}
       <svg
         viewBox="0 0 140 125"
         style={{ height: `${sizeConfig.emblemH}px`, width: 'auto' }}
-        class="shrink-0 overflow-visible drop-shadow-2xs"
+        className="shrink-0 overflow-visible drop-shadow-2xs"
         aria-label="Karmayogi Bharat Emblem"
       >
         <defs>
@@ -139,28 +139,28 @@ export const KarmayogiLogo: React.FC<KarmayogiLogoProps> = ({
       </svg>
 
       {/* Official Text: "कर्मयोगी भारत" and "—— लोकहितं मम करणीयम् ——" */}
-      <div class="flex flex-col justify-center leading-none">
-        <div class={`font-black tracking-tight ${sizeConfig.titleText} flex items-baseline gap-1.5`}>
+      <div className="flex flex-col justify-center leading-none">
+        <div className={`font-black tracking-tight ${sizeConfig.titleText} flex items-baseline gap-1.5`}>
           {/* Saffron: कर्मयोगी */}
-          <span class="text-[#EF951E] font-extrabold" style={{ fontFamily: "'Noto Sans Devanagari', 'Segoe UI', system-ui, sans-serif" }}>
+          <span className="text-[#EF951E] font-extrabold" style={{ fontFamily: "'Noto Sans Devanagari', 'Segoe UI', system-ui, sans-serif" }}>
             कर्मयोगी
           </span>
           {/* Royal Navy: भारत */}
-          <span class="text-[#1B4CA1] font-extrabold" style={{ fontFamily: "'Noto Sans Devanagari', 'Segoe UI', system-ui, sans-serif" }}>
+          <span className="text-[#1B4CA1] font-extrabold" style={{ fontFamily: "'Noto Sans Devanagari', 'Segoe UI', system-ui, sans-serif" }}>
             भारत
           </span>
         </div>
 
         {showMotto && (
-          <div class="mt-1 flex items-center justify-center gap-1.5 text-[#1B2133] opacity-95">
-            <span class="h-[1px] w-4 sm:w-6 bg-[#1B2133]/60"></span>
+          <div className="mt-1 flex items-center justify-center gap-1.5 text-[#1B2133] opacity-95">
+            <span className="h-[1px] w-4 sm:w-6 bg-[#1B2133]/60"></span>
             <span
-              class={`font-semibold tracking-wider text-[#1B2133] whitespace-nowrap ${sizeConfig.mottoText}`}
+              className={`font-semibold tracking-wider text-[#1B2133] whitespace-nowrap ${sizeConfig.mottoText}`}
               style={{ fontFamily: "'Noto Sans Devanagari', 'Segoe UI', system-ui, sans-serif" }}
             >
               लोकहितं मम करणीयम्
             </span>
-            <span class="h-[1px] w-4 sm:w-6 bg-[#1B2133]/60"></span>
+            <span className="h-[1px] w-4 sm:w-6 bg-[#1B2133]/60"></span>
           </div>
         )}
       </div>
